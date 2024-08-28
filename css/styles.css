@@ -7,9 +7,14 @@
 body {
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
+    padding-top: 80px; /* Espaço para a navbar fixa */
 }
 
 .nav-bar-container {
+    position: fixed;
+    top: 0; /* Fixar no topo */
+    left: 0; /* Fixar no lado esquerdo */
+    right: 0; /* Fixar no lado direito */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +22,7 @@ body {
     height: 80px;
     background-color: blue;
     padding: 0 20px; 
+    z-index: 1000; /* Garante que a navbar esteja acima de outros conteúdos */
 }
 
 .teste {
@@ -152,6 +158,7 @@ body {
     position: relative;
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .card:hover {
@@ -169,71 +176,58 @@ body {
     background-position: center;
 }
 
-.card
-
 .card-description {
     padding: 10px;
     background-color: #fff;
 }
 
+/* Imagens dos cards */
 .card-1 .card-image {
     background-image: url(../img/kit1.png);
-    background-repeat: no-repeat;
 }
 
 .card-2 .card-image {
     background-image: url(../img/kit2.png);
-    background-repeat: no-repeat;
 }
 
 .card-3 .card-image {
     background-image: url(../img/kit3.png);
-    background-repeat: no-repeat;
 }
 
 .card-4 .card-image {
     background-image: url(../img/kitgk.png);
-    background-repeat: no-repeat;
 }
 
 .card-5 .card-image {
     background-image: url(../img/kit23-24.png);
-    background-repeat: no-repeat;
 }
 
 .card-6 .card-image {
     background-image: url(../img/retro1.png);
-    background-repeat: no-repeat;
 }
 
 .card-7 .card-image {
     background-image: url(../img/retro2.png);
-    background-repeat: no-repeat;
 }
 
 .card-8 .card-image {
     background-image: url(../img/retro3.png);
-    background-repeat: no-repeat;
 }
 
 .card-9 .card-image {
     background-image: url(../img/jacket1.png);
-    background-repeat: no-repeat;
 }
 
 .card-10 .card-image {
     background-image: url(../img/jacket2.png);
-    background-repeat: no-repeat;
 }
 
 .card-11 .card-image {
     background-image: url(../img/jacket3.png);
-    background-repeat: no-repeat;
 }
 
 .card-12 .card-image {
     background-image: url(../img/jacket4.png);
-    background-repeat: no-repeat;
 }
 
 /* Estilos gerais do footer */
@@ -259,7 +253,7 @@ body {
 .social-icons a {
     color: #fff; 
     font-size: 24px; 
-    margin: 10px 10px; 
+    margin: 10px; 
     text-decoration: none; 
 }
 
@@ -267,8 +261,8 @@ body {
     color: #ddd; 
 }
 
-@media screen and (max-width:768px){
-    html,body {
+@media screen and (max-width: 768px) {
+    html, body {
         overflow-x: hidden;
         width: 100%;
     }
